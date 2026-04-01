@@ -130,27 +130,35 @@
             // 
             // txtCode
             // 
+            this.txtCode.Enabled = false;
             this.txtCode.Location = new System.Drawing.Point(167, 148);
+            this.txtCode.Mask = "9999999999999999999";
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(71, 20);
             this.txtCode.TabIndex = 6;
+            this.txtCode.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtCode_MaskInputRejected);
             // 
             // txtPrice
             // 
+            this.txtPrice.Enabled = false;
             this.txtPrice.Location = new System.Drawing.Point(427, 94);
+            this.txtPrice.Mask = "999999999999";
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(65, 20);
             this.txtPrice.TabIndex = 7;
             // 
             // txtStock
             // 
+            this.txtStock.Enabled = false;
             this.txtStock.Location = new System.Drawing.Point(427, 148);
+            this.txtStock.Mask = "99999999999";
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(65, 20);
             this.txtStock.TabIndex = 8;
             // 
             // cbxCateg
             // 
+            this.cbxCateg.Enabled = false;
             this.cbxCateg.FormattingEnabled = true;
             this.cbxCateg.Items.AddRange(new object[] {
             "Alimentos",
@@ -173,9 +181,11 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(137, 20);
             this.txtName.TabIndex = 10;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // txtDesc
             // 
+            this.txtDesc.Enabled = false;
             this.txtDesc.Location = new System.Drawing.Point(167, 201);
             this.txtDesc.Multiline = true;
             this.txtDesc.Name = "txtDesc";
@@ -230,7 +240,8 @@
             this.Controls.Add(this.gpbMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
-            this.Text = "Agregar producto..";
+            this.Text = "Gestor de Inventario";
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.gpbMain.ResumeLayout(false);
             this.gpbMain.PerformLayout();
             this.ResumeLayout(false);

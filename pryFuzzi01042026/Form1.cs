@@ -16,5 +16,15 @@ namespace pryFuzzi01042026
         {
             InitializeComponent();
         }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+            txtCode.Enabled = true;
+        }
+
+        private void txtCode_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+     
+        }
     }
 }
