@@ -131,6 +131,7 @@
             // txtCode
             // 
             this.txtCode.Location = new System.Drawing.Point(167, 148);
+            this.txtCode.Mask = "9999999999999999999";
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(71, 20);
             this.txtCode.TabIndex = 6;
@@ -138,6 +139,7 @@
             // txtPrice
             // 
             this.txtPrice.Location = new System.Drawing.Point(427, 94);
+            this.txtPrice.Mask = "999999999999";
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(65, 20);
             this.txtPrice.TabIndex = 7;
@@ -145,6 +147,7 @@
             // txtStock
             // 
             this.txtStock.Location = new System.Drawing.Point(427, 148);
+            this.txtStock.Mask = "99999999999";
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(65, 20);
             this.txtStock.TabIndex = 8;
@@ -230,7 +233,8 @@
             this.Controls.Add(this.gpbMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
-            this.Text = "Agregar producto..";
+            this.Text = "Gestor de Inventario";
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.gpbMain.ResumeLayout(false);
             this.gpbMain.PerformLayout();
             this.ResumeLayout(false);
