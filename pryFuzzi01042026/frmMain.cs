@@ -12,6 +12,10 @@ namespace pryFuzzi01042026
 {
     public partial class frmMain : Form
     {
+      
+       //declaración de variables globales 
+        
+        
         public frmMain()
         {
             InitializeComponent();
@@ -40,6 +44,16 @@ namespace pryFuzzi01042026
         private void txtStock_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
             cbxCateg.Enabled = true;
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            lblRegistroDebug.Text = txtName.Text + " " + txtCode.Text + " " + txtPrice.Text + " " + txtStock.Text + " " + txtDesc.Text;
+        }
+
+        private void gpbMain_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

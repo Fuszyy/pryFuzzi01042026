@@ -46,12 +46,14 @@
             this.lblDesc = new System.Windows.Forms.Label();
             this.lblCode = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.lblRegistroDebug = new System.Windows.Forms.Label();
             this.gpbMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // gpbMain
             // 
             this.gpbMain.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.gpbMain.Controls.Add(this.lblRegistroDebug);
             this.gpbMain.Controls.Add(this.lblTitle);
             this.gpbMain.Controls.Add(this.btnDelete);
             this.gpbMain.Controls.Add(this.btnAdd);
@@ -73,6 +75,7 @@
             this.gpbMain.Size = new System.Drawing.Size(680, 374);
             this.gpbMain.TabIndex = 0;
             this.gpbMain.TabStop = false;
+            this.gpbMain.Enter += new System.EventHandler(this.gpbMain_Enter);
             // 
             // lblTitle
             // 
@@ -101,6 +104,7 @@
             this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Agregar..";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnMod
             // 
@@ -233,6 +237,15 @@
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Nombre:";
             // 
+            // lblRegistroDebug
+            // 
+            this.lblRegistroDebug.AutoSize = true;
+            this.lblRegistroDebug.Location = new System.Drawing.Point(427, 285);
+            this.lblRegistroDebug.Name = "lblRegistroDebug";
+            this.lblRegistroDebug.Size = new System.Drawing.Size(116, 13);
+            this.lblRegistroDebug.TabIndex = 11;
+            this.lblRegistroDebug.Text = " TEXTO DE EJEMPLO";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,6 +284,7 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label lblRegistroDebug;
     }
 }
 
