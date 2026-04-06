@@ -33,7 +33,7 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.btnMod = new System.Windows.Forms.Button();
+            this.btnInventario = new System.Windows.Forms.Button();
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.cbxCateg = new System.Windows.Forms.ComboBox();
@@ -47,17 +47,19 @@
             this.lblCode = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblRegistroDebug = new System.Windows.Forms.Label();
+            this.lblDebug = new System.Windows.Forms.Label();
             this.gpbMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // gpbMain
             // 
             this.gpbMain.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.gpbMain.Controls.Add(this.lblDebug);
             this.gpbMain.Controls.Add(this.lblRegistroDebug);
             this.gpbMain.Controls.Add(this.lblTitle);
             this.gpbMain.Controls.Add(this.btnDelete);
             this.gpbMain.Controls.Add(this.btnAdd);
-            this.gpbMain.Controls.Add(this.btnMod);
+            this.gpbMain.Controls.Add(this.btnInventario);
             this.gpbMain.Controls.Add(this.txtDesc);
             this.gpbMain.Controls.Add(this.txtName);
             this.gpbMain.Controls.Add(this.cbxCateg);
@@ -106,14 +108,15 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // btnMod
+            // btnInventario
             // 
-            this.btnMod.Location = new System.Drawing.Point(509, 341);
-            this.btnMod.Name = "btnMod";
-            this.btnMod.Size = new System.Drawing.Size(75, 23);
-            this.btnMod.TabIndex = 8;
-            this.btnMod.Text = "Modificar";
-            this.btnMod.UseVisualStyleBackColor = true;
+            this.btnInventario.AllowDrop = true;
+            this.btnInventario.Location = new System.Drawing.Point(509, 341);
+            this.btnInventario.Name = "btnInventario";
+            this.btnInventario.Size = new System.Drawing.Size(75, 23);
+            this.btnInventario.TabIndex = 8;
+            this.btnInventario.Text = "Inventario";
+            this.btnInventario.UseVisualStyleBackColor = true;
             // 
             // txtDesc
             // 
@@ -246,6 +249,15 @@
             this.lblRegistroDebug.TabIndex = 11;
             this.lblRegistroDebug.Text = " TEXTO DE EJEMPLO";
             // 
+            // lblDebug
+            // 
+            this.lblDebug.AutoSize = true;
+            this.lblDebug.Location = new System.Drawing.Point(427, 307);
+            this.lblDebug.Name = "lblDebug";
+            this.lblDebug.Size = new System.Drawing.Size(125, 13);
+            this.lblDebug.TabIndex = 12;
+            this.lblDebug.Text = " TEXTO DE EJEMPLO 2";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -276,7 +288,7 @@
         private System.Windows.Forms.Label lblCategory;
         private System.Windows.Forms.Label lblStock;
         private System.Windows.Forms.Label lblPrice;
-        private System.Windows.Forms.Button btnMod;
+        private System.Windows.Forms.Button btnInventario;
         private System.Windows.Forms.TextBox txtDesc;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.ComboBox cbxCateg;
@@ -285,6 +297,7 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblRegistroDebug;
+        private System.Windows.Forms.Label lblDebug;
     }
 }
 

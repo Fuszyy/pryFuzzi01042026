@@ -12,10 +12,18 @@ namespace pryFuzzi01042026
 {
     public partial class frmMain : Form
     {
-      
-       //declaración de variables globales 
-        
-        
+
+        //declaración de variables globales 
+
+        string varCode = "";
+        string varName = "";
+        string varDesc = "";
+        int varStock = 0;
+        int varPrice = 0;
+        string varCategory = "";
+
+
+
         public frmMain()
         {
             InitializeComponent();
@@ -46,9 +54,27 @@ namespace pryFuzzi01042026
             cbxCateg.Enabled = true;
         }
 
+        //de interfaz
         private void btnAdd_Click(object sender, EventArgs e)
         {
             lblRegistroDebug.Text = txtName.Text + " " + txtCode.Text + " " + txtPrice.Text + " " + txtStock.Text + " " + txtDesc.Text;
+            varCode = txtCode.Text;
+            varName = txtName.Text;
+            varDesc = txtDesc.Text;
+            varPrice = Convert.ToInt16(txtPrice.Text);
+            varStock = int.Parse(txtStock.Text);
+            varCategory = cbxCateg.Text;
+
+            lblDebug.Text = varCode + " " + varName + " " + varDesc + " " + varPrice + " " + varStock + " " + varCategory;
+            string MsgBox = varCode + " " + varName + " " + varDesc + " " + varPrice + " " + varStock + " " + varCategory;
+            MessageBox.Show(MsgBox);
+
+            txtName.Text = string.Empty;
+            txtCode.Text = string.Empty;
+            txtDesc.Text = string.Empty;
+            txtStock.Text = string.Empty;
+            txtPrice.Text = string.Empty;
+            cbxCateg.Text = string.Empty;
         }
 
         private void gpbMain_Enter(object sender, EventArgs e)
