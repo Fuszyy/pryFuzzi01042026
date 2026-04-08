@@ -104,7 +104,7 @@
             this.lblTitle.Location = new System.Drawing.Point(189, 16);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(293, 31);
-            this.lblTitle.TabIndex = 10;
+            this.lblTitle.TabIndex = 12;
             this.lblTitle.Text = "Gestión de Inventario";
             this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
             // 
@@ -136,6 +136,7 @@
             this.btnInventario.TabIndex = 8;
             this.btnInventario.Text = "Inventario";
             this.btnInventario.UseVisualStyleBackColor = true;
+            this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
             // 
             // txtDesc
             // 
@@ -179,7 +180,7 @@
             // 
             this.txtStock.Enabled = false;
             this.txtStock.Location = new System.Drawing.Point(427, 148);
-            this.txtStock.Mask = "99999999999";
+            this.txtStock.Mask = "99999";
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(65, 20);
             this.txtStock.TabIndex = 5;
@@ -189,7 +190,7 @@
             // 
             this.txtPrice.Enabled = false;
             this.txtPrice.Location = new System.Drawing.Point(427, 94);
-            this.txtPrice.Mask = "999999999999";
+            this.txtPrice.Mask = "99999";
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(65, 20);
             this.txtPrice.TabIndex = 4;
@@ -199,7 +200,7 @@
             // 
             this.txtCode.Enabled = false;
             this.txtCode.Location = new System.Drawing.Point(167, 148);
-            this.txtCode.Mask = "9999999999999999999";
+            this.txtCode.Mask = "99999";
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(71, 20);
             this.txtCode.TabIndex = 2;

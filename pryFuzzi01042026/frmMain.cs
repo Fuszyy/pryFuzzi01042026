@@ -86,5 +86,10 @@ namespace pryFuzzi01042026
         {
 
         }
+
+        private void btnInventario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
