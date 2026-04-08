@@ -34,7 +34,7 @@ namespace pryFuzzi01042026
             txtCode.Enabled = true;
         }
 
-        private void txtCode_MaskInputRejected(object sender,MaskInputRejectedEventArgs e)
+        private void txtCode_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
             txtDesc.Enabled = true;
         }
@@ -57,23 +57,70 @@ namespace pryFuzzi01042026
         //de interfaz
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            lblRegistroDebug.Text = txtName.Text + " " + txtCode.Text + " " + txtPrice.Text + " " + txtStock.Text + " " + txtDesc.Text;
-            varCode = txtCode.Text;
-            varName = txtName.Text;
-            varDesc = txtDesc.Text;
-            varCategory = cbxCateg.Text;
 
-            lblDebug.Text = varCode + " " + varName + " " + varDesc + " " + varPrice + " " + varStock + " " + varCategory;
-            string MsgBox = varCode + " " + varName + " " + varDesc + " " + varPrice + " " + varStock + " " + varCategory;
-            MessageBox.Show(MsgBox);
+            if (txtName.Text == "")
+            {
+                MessageBox.Show("Complete los datos.");
+            }
+            else
+            {
+                if (txtCode.Text == "")
+                {
+                    MessageBox.Show("Complete los datos.");
+                }
+                else
+                {
+                    if (txtDesc.Text == "")
+                    {
+                        MessageBox.Show("Complete los datos.");
+                    }
+                    else
+                    {
+                        if (txtPrice.Text == "")
+                        {
+                            MessageBox.Show("Complete los datos.");
+                        }
+                        else
+                        {
+                            if (txtStock.Text == "")
+                            {
+                                MessageBox.Show("Complete los datos.");
+                            }
+                            else
+                            {
+                                if (cbxCateg.Text == "")
+                                {
+                                    MessageBox.Show("Complete los datos.");
+                                }
+                                else
+                                {
+                                    varPrice = int.Parse(txtPrice.Text);
+                                    varStock = int.Parse(txtStock.Text);
+                                    lblRegistroDebug.Text = txtName.Text + " " + txtCode.Text + " " + txtPrice.Text + " " + txtStock.Text + " " + txtDesc.Text;
+                                    varCode = txtCode.Text;
+                                    varName = txtName.Text;
+                                    varDesc = txtDesc.Text;
+                                    varCategory = cbxCateg.Text;
 
-            txtName.Text = string.Empty;
-            txtCode.Text = string.Empty;
-            txtDesc.Text = string.Empty;
-            txtStock.Text = string.Empty;
-            txtPrice.Text = string.Empty;
-            cbxCateg.Text = string.Empty;
+
+                                    lblDebug.Text = varCode + " " + varName + " " + varDesc + " " + varPrice + " " + varStock + " " + varCategory;
+                                    string MsgBox = varCode + " " + varName + " " + varDesc + " " + varPrice + " " + varStock + " " + varCategory;
+                                    MessageBox.Show(MsgBox);
+
+                                    txtName.Text = string.Empty;
+                                    txtCode.Text = string.Empty;
+                                    txtDesc.Text = string.Empty;
+                                    txtStock.Text = string.Empty;
+                                    txtPrice.Text = string.Empty;
+                                    cbxCateg.Text = string.Empty;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
+            
 
         private void gpbMain_Enter(object sender, EventArgs e)
         {
@@ -86,6 +133,11 @@ namespace pryFuzzi01042026
         }
 
         private void btnInventario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxCateg_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

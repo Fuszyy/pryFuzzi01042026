@@ -48,7 +48,15 @@
             this.lblDesc = new System.Windows.Forms.Label();
             this.lblCode = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.columnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpbMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // gpbMain
@@ -72,9 +80,9 @@
             this.gpbMain.Controls.Add(this.lblDesc);
             this.gpbMain.Controls.Add(this.lblCode);
             this.gpbMain.Controls.Add(this.lblName);
-            this.gpbMain.Location = new System.Drawing.Point(57, 38);
+            this.gpbMain.Location = new System.Drawing.Point(57, 12);
             this.gpbMain.Name = "gpbMain";
-            this.gpbMain.Size = new System.Drawing.Size(680, 374);
+            this.gpbMain.Size = new System.Drawing.Size(680, 289);
             this.gpbMain.TabIndex = 0;
             this.gpbMain.TabStop = false;
             this.gpbMain.Enter += new System.EventHandler(this.gpbMain_Enter);
@@ -82,7 +90,7 @@
             // lblDebug
             // 
             this.lblDebug.AutoSize = true;
-            this.lblDebug.Location = new System.Drawing.Point(427, 307);
+            this.lblDebug.Location = new System.Drawing.Point(416, 216);
             this.lblDebug.Name = "lblDebug";
             this.lblDebug.Size = new System.Drawing.Size(125, 13);
             this.lblDebug.TabIndex = 12;
@@ -91,7 +99,7 @@
             // lblRegistroDebug
             // 
             this.lblRegistroDebug.AutoSize = true;
-            this.lblRegistroDebug.Location = new System.Drawing.Point(427, 285);
+            this.lblRegistroDebug.Location = new System.Drawing.Point(416, 194);
             this.lblRegistroDebug.Name = "lblRegistroDebug";
             this.lblRegistroDebug.Size = new System.Drawing.Size(116, 13);
             this.lblRegistroDebug.TabIndex = 11;
@@ -110,7 +118,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(590, 341);
+            this.btnDelete.Location = new System.Drawing.Point(581, 255);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 9;
@@ -119,7 +127,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(428, 341);
+            this.btnAdd.Location = new System.Drawing.Point(419, 255);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 7;
@@ -130,7 +138,7 @@
             // btnInventario
             // 
             this.btnInventario.AllowDrop = true;
-            this.btnInventario.Location = new System.Drawing.Point(509, 341);
+            this.btnInventario.Location = new System.Drawing.Point(500, 255);
             this.btnInventario.Name = "btnInventario";
             this.btnInventario.Size = new System.Drawing.Size(75, 23);
             this.btnInventario.TabIndex = 8;
@@ -141,7 +149,7 @@
             // txtDesc
             // 
             this.txtDesc.Enabled = false;
-            this.txtDesc.Location = new System.Drawing.Point(167, 201);
+            this.txtDesc.Location = new System.Drawing.Point(158, 170);
             this.txtDesc.Multiline = true;
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(191, 84);
@@ -150,7 +158,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(167, 94);
+            this.txtName.Location = new System.Drawing.Point(158, 63);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(137, 20);
             this.txtName.TabIndex = 1;
@@ -171,15 +179,16 @@
             "Electrónicos",
             "Vestimenta",
             "Misceláneo"});
-            this.cbxCateg.Location = new System.Drawing.Point(427, 201);
+            this.cbxCateg.Location = new System.Drawing.Point(418, 170);
             this.cbxCateg.Name = "cbxCateg";
             this.cbxCateg.Size = new System.Drawing.Size(137, 21);
             this.cbxCateg.TabIndex = 6;
+            this.cbxCateg.SelectedIndexChanged += new System.EventHandler(this.cbxCateg_SelectedIndexChanged);
             // 
             // txtStock
             // 
             this.txtStock.Enabled = false;
-            this.txtStock.Location = new System.Drawing.Point(427, 148);
+            this.txtStock.Location = new System.Drawing.Point(418, 117);
             this.txtStock.Mask = "99999";
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(65, 20);
@@ -189,7 +198,7 @@
             // txtPrice
             // 
             this.txtPrice.Enabled = false;
-            this.txtPrice.Location = new System.Drawing.Point(427, 94);
+            this.txtPrice.Location = new System.Drawing.Point(418, 63);
             this.txtPrice.Mask = "99999";
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(65, 20);
@@ -199,7 +208,7 @@
             // txtCode
             // 
             this.txtCode.Enabled = false;
-            this.txtCode.Location = new System.Drawing.Point(167, 148);
+            this.txtCode.Location = new System.Drawing.Point(158, 117);
             this.txtCode.Mask = "99999";
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(71, 20);
@@ -209,7 +218,7 @@
             // lblCategory
             // 
             this.lblCategory.AutoSize = true;
-            this.lblCategory.Location = new System.Drawing.Point(364, 204);
+            this.lblCategory.Location = new System.Drawing.Point(355, 173);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(57, 13);
             this.lblCategory.TabIndex = 5;
@@ -218,7 +227,7 @@
             // lblStock
             // 
             this.lblStock.AutoSize = true;
-            this.lblStock.Location = new System.Drawing.Point(369, 151);
+            this.lblStock.Location = new System.Drawing.Point(360, 120);
             this.lblStock.Name = "lblStock";
             this.lblStock.Size = new System.Drawing.Size(52, 13);
             this.lblStock.TabIndex = 4;
@@ -227,7 +236,7 @@
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(381, 97);
+            this.lblPrice.Location = new System.Drawing.Point(372, 66);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(40, 13);
             this.lblPrice.TabIndex = 3;
@@ -236,7 +245,7 @@
             // lblDesc
             // 
             this.lblDesc.AutoSize = true;
-            this.lblDesc.Location = new System.Drawing.Point(95, 204);
+            this.lblDesc.Location = new System.Drawing.Point(86, 173);
             this.lblDesc.Name = "lblDesc";
             this.lblDesc.Size = new System.Drawing.Size(66, 13);
             this.lblDesc.TabIndex = 2;
@@ -245,7 +254,7 @@
             // lblCode
             // 
             this.lblCode.AutoSize = true;
-            this.lblCode.Location = new System.Drawing.Point(118, 151);
+            this.lblCode.Location = new System.Drawing.Point(109, 120);
             this.lblCode.Name = "lblCode";
             this.lblCode.Size = new System.Drawing.Size(43, 13);
             this.lblCode.TabIndex = 1;
@@ -254,11 +263,57 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(114, 97);
+            this.lblName.Location = new System.Drawing.Point(105, 66);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(47, 13);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Nombre:";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.columnName,
+            this.ColumnCode,
+            this.ColumnDescription,
+            this.ColumnPrice,
+            this.ColumnStock,
+            this.ColumnCategory});
+            this.dataGridView1.Location = new System.Drawing.Point(79, 319);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(643, 167);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // columnName
+            // 
+            this.columnName.HeaderText = "Nombre";
+            this.columnName.Name = "columnName";
+            // 
+            // ColumnCode
+            // 
+            this.ColumnCode.HeaderText = "Código";
+            this.ColumnCode.Name = "ColumnCode";
+            // 
+            // ColumnDescription
+            // 
+            this.ColumnDescription.HeaderText = "Descripción";
+            this.ColumnDescription.Name = "ColumnDescription";
+            // 
+            // ColumnPrice
+            // 
+            this.ColumnPrice.HeaderText = "Precio";
+            this.ColumnPrice.Name = "ColumnPrice";
+            // 
+            // ColumnStock
+            // 
+            this.ColumnStock.HeaderText = "Stock";
+            this.ColumnStock.Name = "ColumnStock";
+            // 
+            // ColumnCategory
+            // 
+            this.ColumnCategory.HeaderText = "Categoría";
+            this.ColumnCategory.Name = "ColumnCategory";
             // 
             // frmMain
             // 
@@ -267,7 +322,8 @@
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImage = global::pryFuzzi01042026.Properties.Resources.GettyImages_142227958_optimized;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 486);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.gpbMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
@@ -276,6 +332,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.gpbMain.ResumeLayout(false);
             this.gpbMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -301,6 +358,13 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblRegistroDebug;
         private System.Windows.Forms.Label lblDebug;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDescription;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnStock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCategory;
     }
 }
 
