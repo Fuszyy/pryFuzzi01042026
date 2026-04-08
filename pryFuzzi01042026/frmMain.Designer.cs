@@ -48,7 +48,7 @@
             this.lblDesc = new System.Windows.Forms.Label();
             this.lblCode = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvData = new System.Windows.Forms.DataGridView();
             this.columnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,7 +56,7 @@
             this.ColumnStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpbMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
             // 
             // gpbMain
@@ -160,7 +160,7 @@
             // 
             this.txtName.Location = new System.Drawing.Point(158, 63);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(137, 20);
+            this.txtName.Size = new System.Drawing.Size(129, 20);
             this.txtName.TabIndex = 1;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
@@ -269,25 +269,26 @@
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Nombre:";
             // 
-            // dataGridView1
+            // dgvData
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvData.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.columnName,
             this.ColumnCode,
             this.ColumnDescription,
             this.ColumnPrice,
             this.ColumnStock,
             this.ColumnCategory});
-            this.dataGridView1.Location = new System.Drawing.Point(79, 319);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(643, 167);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvData.Location = new System.Drawing.Point(83, 318);
+            this.dgvData.Name = "dgvData";
+            this.dgvData.Size = new System.Drawing.Size(630, 167);
+            this.dgvData.TabIndex = 1;
+            this.dgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // columnName
             // 
-            this.columnName.HeaderText = "Nombre";
+            this.columnName.HeaderText = "Nombre del Producto";
             this.columnName.Name = "columnName";
             // 
             // ColumnCode
@@ -307,7 +308,7 @@
             // 
             // ColumnStock
             // 
-            this.ColumnStock.HeaderText = "Stock";
+            this.ColumnStock.HeaderText = "Stock o cantidad";
             this.ColumnStock.Name = "ColumnStock";
             // 
             // ColumnCategory
@@ -323,7 +324,7 @@
             this.BackgroundImage = global::pryFuzzi01042026.Properties.Resources.GettyImages_142227958_optimized;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 486);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvData);
             this.Controls.Add(this.gpbMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
@@ -332,7 +333,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.gpbMain.ResumeLayout(false);
             this.gpbMain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -358,7 +359,7 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblRegistroDebug;
         private System.Windows.Forms.Label lblDebug;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvData;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDescription;
