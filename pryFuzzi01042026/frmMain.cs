@@ -61,8 +61,6 @@ namespace pryFuzzi01042026
             varCode = txtCode.Text;
             varName = txtName.Text;
             varDesc = txtDesc.Text;
-            varPrice = Convert.ToInt16(txtPrice.Text);
-            varStock = int.Parse(txtStock.Text);
             varCategory = cbxCateg.Text;
 
             lblDebug.Text = varCode + " " + varName + " " + varDesc + " " + varPrice + " " + varStock + " " + varCategory;
