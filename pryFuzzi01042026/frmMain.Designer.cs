@@ -270,6 +270,7 @@
             this.Controls.Add(this.gpbMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestor de Inventario";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.gpbMain.ResumeLayout(false);
