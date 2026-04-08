@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.gpbMain = new System.Windows.Forms.GroupBox();
+            this.lblDebug = new System.Windows.Forms.Label();
+            this.lblRegistroDebug = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -46,8 +48,6 @@
             this.lblDesc = new System.Windows.Forms.Label();
             this.lblCode = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.lblRegistroDebug = new System.Windows.Forms.Label();
-            this.lblDebug = new System.Windows.Forms.Label();
             this.gpbMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,6 +79,24 @@
             this.gpbMain.TabStop = false;
             this.gpbMain.Enter += new System.EventHandler(this.gpbMain_Enter);
             // 
+            // lblDebug
+            // 
+            this.lblDebug.AutoSize = true;
+            this.lblDebug.Location = new System.Drawing.Point(427, 307);
+            this.lblDebug.Name = "lblDebug";
+            this.lblDebug.Size = new System.Drawing.Size(125, 13);
+            this.lblDebug.TabIndex = 12;
+            this.lblDebug.Text = " TEXTO DE EJEMPLO 2";
+            // 
+            // lblRegistroDebug
+            // 
+            this.lblRegistroDebug.AutoSize = true;
+            this.lblRegistroDebug.Location = new System.Drawing.Point(427, 285);
+            this.lblRegistroDebug.Name = "lblRegistroDebug";
+            this.lblRegistroDebug.Size = new System.Drawing.Size(116, 13);
+            this.lblRegistroDebug.TabIndex = 11;
+            this.lblRegistroDebug.Text = " TEXTO DE EJEMPLO";
+            // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
@@ -88,6 +106,7 @@
             this.lblTitle.Size = new System.Drawing.Size(293, 31);
             this.lblTitle.TabIndex = 10;
             this.lblTitle.Text = "Gestión de Inventario";
+            this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
             // 
             // btnDelete
             // 
@@ -149,7 +168,7 @@
             "Juguetes",
             "Cocina",
             "Electrónicos",
-            "Ropa",
+            "Vestimenta",
             "Misceláneo"});
             this.cbxCateg.Location = new System.Drawing.Point(427, 201);
             this.cbxCateg.Name = "cbxCateg";
@@ -239,24 +258,6 @@
             this.lblName.Size = new System.Drawing.Size(47, 13);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Nombre:";
-            // 
-            // lblRegistroDebug
-            // 
-            this.lblRegistroDebug.AutoSize = true;
-            this.lblRegistroDebug.Location = new System.Drawing.Point(427, 285);
-            this.lblRegistroDebug.Name = "lblRegistroDebug";
-            this.lblRegistroDebug.Size = new System.Drawing.Size(116, 13);
-            this.lblRegistroDebug.TabIndex = 11;
-            this.lblRegistroDebug.Text = " TEXTO DE EJEMPLO";
-            // 
-            // lblDebug
-            // 
-            this.lblDebug.AutoSize = true;
-            this.lblDebug.Location = new System.Drawing.Point(427, 307);
-            this.lblDebug.Name = "lblDebug";
-            this.lblDebug.Size = new System.Drawing.Size(125, 13);
-            this.lblDebug.TabIndex = 12;
-            this.lblDebug.Text = " TEXTO DE EJEMPLO 2";
             // 
             // frmMain
             // 
