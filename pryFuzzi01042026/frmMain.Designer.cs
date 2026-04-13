@@ -165,7 +165,7 @@
             "Cocina",
             "Electrónicos",
             "Vestimenta",
-            "Misceláneo"});
+            "Otros"});
             this.cbxCateg.Location = new System.Drawing.Point(418, 170);
             this.cbxCateg.Name = "cbxCateg";
             this.cbxCateg.Size = new System.Drawing.Size(137, 21);
