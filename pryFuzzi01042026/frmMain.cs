@@ -60,37 +60,37 @@ namespace pryFuzzi01042026
 
             if (txtName.Text == "")
             {
-                MessageBox.Show("Complete los datos.");
+                MessageBox.Show("Complete el nombre.");
             }
             else
             {
                 if (txtCode.Text == "")
                 {
-                    MessageBox.Show("Complete los datos.");
+                    MessageBox.Show("Complete el código.");
                 }
                 else
                 {
                     if (txtDesc.Text == "")
                     {
-                        MessageBox.Show("Complete los datos.");
+                        MessageBox.Show("Complete la descripción.");
                     }
                     else
                     {
                         if (txtPrice.Text == "")
                         {
-                            MessageBox.Show("Complete los datos.");
+                            MessageBox.Show("Complete el precio.");
                         }
                         else
                         {
                             if (txtStock.Text == "")
                             {
-                                MessageBox.Show("Complete los datos.");
+                                MessageBox.Show("Complete el stock.");
                             }
                             else
                             {
                                 if (cbxCateg.Text == "")
                                 {
-                                    MessageBox.Show("Complete los datos.");
+                                    MessageBox.Show("Complete la categoría.");
                                 }
                                 else
                                 {
@@ -143,6 +143,11 @@ namespace pryFuzzi01042026
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
         {
 
         }

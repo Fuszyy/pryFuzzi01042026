@@ -35,7 +35,6 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.btnInventario = new System.Windows.Forms.Button();
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.cbxCateg = new System.Windows.Forms.ComboBox();
@@ -67,7 +66,6 @@
             this.gpbMain.Controls.Add(this.lblTitle);
             this.gpbMain.Controls.Add(this.btnDelete);
             this.gpbMain.Controls.Add(this.btnAdd);
-            this.gpbMain.Controls.Add(this.btnInventario);
             this.gpbMain.Controls.Add(this.txtDesc);
             this.gpbMain.Controls.Add(this.txtName);
             this.gpbMain.Controls.Add(this.cbxCateg);
@@ -121,30 +119,19 @@
             this.btnDelete.Location = new System.Drawing.Point(581, 255);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnDelete.TabIndex = 9;
+            this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "Eliminar";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(419, 255);
+            this.btnAdd.Location = new System.Drawing.Point(500, 255);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Agregar..";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnInventario
-            // 
-            this.btnInventario.AllowDrop = true;
-            this.btnInventario.Location = new System.Drawing.Point(500, 255);
-            this.btnInventario.Name = "btnInventario";
-            this.btnInventario.Size = new System.Drawing.Size(75, 23);
-            this.btnInventario.TabIndex = 8;
-            this.btnInventario.Text = "Inventario";
-            this.btnInventario.UseVisualStyleBackColor = true;
-            this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
             // 
             // txtDesc
             // 
@@ -331,6 +318,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestor de Inventario";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.gpbMain.ResumeLayout(false);
             this.gpbMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
@@ -349,7 +337,6 @@
         private System.Windows.Forms.Label lblCategory;
         private System.Windows.Forms.Label lblStock;
         private System.Windows.Forms.Label lblPrice;
-        private System.Windows.Forms.Button btnInventario;
         private System.Windows.Forms.TextBox txtDesc;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.ComboBox cbxCateg;
