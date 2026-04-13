@@ -60,37 +60,37 @@ namespace pryFuzzi01042026
 
             if (txtName.Text == "")
             {
-                MessageBox.Show("Complete el nombre.");
+                MessageBox.Show("Complete el nombre.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 if (txtCode.Text == "")
                 {
-                    MessageBox.Show("Complete el código.");
+                    MessageBox.Show("Complete el código.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
                     if (txtDesc.Text == "")
                     {
-                        MessageBox.Show("Complete la descripción.");
+                        MessageBox.Show("Complete la descripción.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
                         if (txtPrice.Text == "")
                         {
-                            MessageBox.Show("Complete el precio.");
+                            MessageBox.Show("Complete el precio.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         else
                         {
                             if (txtStock.Text == "")
                             {
-                                MessageBox.Show("Complete el stock.");
+                                MessageBox.Show("Complete el stock.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             else
                             {
                                 if (cbxCateg.Text == "")
                                 {
-                                    MessageBox.Show("Complete la categoría.");
+                                    MessageBox.Show("Complete la categoría.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
                                 else
                                 {
