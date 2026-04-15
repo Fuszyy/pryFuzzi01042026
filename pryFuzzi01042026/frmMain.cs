@@ -44,15 +44,7 @@ namespace pryFuzzi01042026
 
         private void txtCode_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-            if (txtCode.Text != "")
-            {
-                txtDesc.Enabled = true;
-            }
-            else
-            {
-                txtDesc.Clear();
-                txtDesc.Enabled = false;
-            }
+            
         }
 
         private void txtDesc_TextChanged(object sender, EventArgs e)
@@ -70,28 +62,12 @@ namespace pryFuzzi01042026
 
         private void txtPrice_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-            if (txtPrice.Text != "")
-            {
-                txtStock.Enabled = true;
-            }
-            else
-            {
-                txtStock.Clear();
-                txtStock.Enabled = false;
-            }
+            
         }
 
         private void txtStock_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-            if (txtStock.Text != "")
-            {
-                cbxCateg.Enabled = true;
-            }
-            else
-            {
-                cbxCateg.SelectedItem = null;
-                cbxCateg.Enabled = false;
-            }
+            
         }
 
         //de interfaz
@@ -206,6 +182,45 @@ namespace pryFuzzi01042026
         {            
             dgvData.Rows.Remove(dgvData.CurrentRow);
             MessageBox.Show("Datos eliminados exitosamente.", "Proceso Finalizado.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void txtCode_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCode.Text != "")
+            {
+                txtDesc.Enabled = true;
+            }
+            else
+            {
+                txtDesc.Clear();
+                txtDesc.Enabled = false;
+            }
+        }
+
+        private void txtPrice_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPrice.Text != "")
+            {
+                txtStock.Enabled = true;
+            }
+            else
+            {
+                txtStock.Clear();
+                txtStock.Enabled = false;
+            }
+        }
+
+        private void txtStock_TextChanged(object sender, EventArgs e)
+        {
+            if (txtStock.Text != "")
+            {
+                cbxCateg.Enabled = true;
+            }
+            else
+            {
+                cbxCateg.SelectedItem = null;
+                cbxCateg.Enabled = false;
+            }
         }
     }
 }

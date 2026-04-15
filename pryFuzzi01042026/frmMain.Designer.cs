@@ -160,6 +160,7 @@
             this.txtStock.Size = new System.Drawing.Size(65, 20);
             this.txtStock.TabIndex = 5;
             this.txtStock.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtStock_MaskInputRejected);
+            this.txtStock.TextChanged += new System.EventHandler(this.txtStock_TextChanged);
             // 
             // txtPrice
             // 
@@ -170,6 +171,7 @@
             this.txtPrice.Size = new System.Drawing.Size(65, 20);
             this.txtPrice.TabIndex = 4;
             this.txtPrice.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtPrice_MaskInputRejected);
+            this.txtPrice.TextChanged += new System.EventHandler(this.txtPrice_TextChanged);
             // 
             // txtCode
             // 
@@ -180,6 +182,7 @@
             this.txtCode.Size = new System.Drawing.Size(71, 20);
             this.txtCode.TabIndex = 2;
             this.txtCode.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtCode_MaskInputRejected);
+            this.txtCode.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             // 
             // lblCategory
             // 
