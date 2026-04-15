@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.gpbMain = new System.Windows.Forms.GroupBox();
-            this.lblDebug = new System.Windows.Forms.Label();
-            this.lblRegistroDebug = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -61,8 +59,6 @@
             // gpbMain
             // 
             this.gpbMain.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.gpbMain.Controls.Add(this.lblDebug);
-            this.gpbMain.Controls.Add(this.lblRegistroDebug);
             this.gpbMain.Controls.Add(this.lblTitle);
             this.gpbMain.Controls.Add(this.btnDelete);
             this.gpbMain.Controls.Add(this.btnAdd);
@@ -85,24 +81,6 @@
             this.gpbMain.TabStop = false;
             this.gpbMain.Enter += new System.EventHandler(this.gpbMain_Enter);
             // 
-            // lblDebug
-            // 
-            this.lblDebug.AutoSize = true;
-            this.lblDebug.Location = new System.Drawing.Point(416, 216);
-            this.lblDebug.Name = "lblDebug";
-            this.lblDebug.Size = new System.Drawing.Size(125, 13);
-            this.lblDebug.TabIndex = 12;
-            this.lblDebug.Text = " TEXTO DE EJEMPLO 2";
-            // 
-            // lblRegistroDebug
-            // 
-            this.lblRegistroDebug.AutoSize = true;
-            this.lblRegistroDebug.Location = new System.Drawing.Point(416, 194);
-            this.lblRegistroDebug.Name = "lblRegistroDebug";
-            this.lblRegistroDebug.Size = new System.Drawing.Size(116, 13);
-            this.lblRegistroDebug.TabIndex = 11;
-            this.lblRegistroDebug.Text = " TEXTO DE EJEMPLO";
-            // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
@@ -122,6 +100,7 @@
             this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "Eliminar";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
@@ -267,8 +246,10 @@
             this.ColumnPrice,
             this.ColumnStock,
             this.ColumnCategory});
+            this.dgvData.Enabled = false;
             this.dgvData.Location = new System.Drawing.Point(83, 318);
             this.dgvData.Name = "dgvData";
+            this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvData.Size = new System.Drawing.Size(630, 167);
             this.dgvData.TabIndex = 1;
             this.dgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -344,8 +325,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Label lblRegistroDebug;
-        private System.Windows.Forms.Label lblDebug;
         private System.Windows.Forms.DataGridView dgvData;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCode;

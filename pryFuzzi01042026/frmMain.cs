@@ -31,27 +31,67 @@ namespace pryFuzzi01042026
 
         private void txtName_TextChanged(object sender, EventArgs e)
         {
-            txtCode.Enabled = true;
+            if (txtName.Text != "")
+            {
+                txtCode.Enabled = true;
+            }
+            else
+            {
+                txtCode.Clear();
+                txtCode.Enabled = false;    
+            }
         }
 
         private void txtCode_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-            txtDesc.Enabled = true;
+            if (txtCode.Text != "")
+            {
+                txtDesc.Enabled = true;
+            }
+            else
+            {
+                txtDesc.Clear();
+                txtDesc.Enabled = false;
+            }
         }
 
         private void txtDesc_TextChanged(object sender, EventArgs e)
         {
-            txtPrice.Enabled = true;
+            if (txtDesc.Text != "")
+            {
+                txtPrice.Enabled = true;
+            }
+            else
+            {
+                txtPrice.Clear();
+                txtPrice.Enabled = false;
+            }
         }
 
         private void txtPrice_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-            txtStock.Enabled = true;
+            if (txtPrice.Text != "")
+            {
+                txtStock.Enabled = true;
+            }
+            else
+            {
+                txtStock.Clear();
+                txtStock.Enabled = false;
+            }
         }
 
         private void txtStock_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-            cbxCateg.Enabled = true;
+            if (txtStock.Text != "")
+            {
+                cbxCateg.Enabled = true;
+            }
+            else
+            {
+                cbxCateg.SelectedItem = null;
+                cbxCateg.Enabled = false;
+            }
         }
 
         //de interfaz
@@ -96,16 +136,12 @@ namespace pryFuzzi01042026
                                 {
                                     varPrice = int.Parse(txtPrice.Text);
                                     varStock = int.Parse(txtStock.Text);
-                                    lblRegistroDebug.Text = txtName.Text + " " + txtCode.Text + " " + txtPrice.Text + " " + txtStock.Text + " " + txtDesc.Text;
                                     varCode = txtCode.Text;
                                     varName = txtName.Text;
                                     varDesc = txtDesc.Text;
                                     varCategory = cbxCateg.Text;
 
-
-                                    lblDebug.Text = varCode + " " + varName + " " + varDesc + " " + varPrice + " " + varStock + " " + varCategory;
-                                    string MsgBox = varCode + " " + varName + " " + varDesc + " " + varPrice + " " + varStock + " " + varCategory;
-                                    MessageBox.Show(MsgBox);
+                                    MessageBox.Show("Datos cargados correctamente.", "Operación exitosa.", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                     txtName.Text = string.Empty;
                                     txtCode.Text = string.Empty;
@@ -113,6 +149,15 @@ namespace pryFuzzi01042026
                                     txtStock.Text = string.Empty;
                                     txtPrice.Text = string.Empty;
                                     cbxCateg.Text = string.Empty;
+                                    cbxCateg.SelectedItem = null;
+
+                                    dgvData.Rows.Add(varName, varCode, varDesc, varPrice, varStock, varCategory);
+
+                                    txtCode.Enabled = false;
+                                    txtDesc.Enabled = false;
+                                    txtStock.Enabled = false;
+                                    txtPrice.Enabled = false;
+                                    cbxCateg.Enabled = false;
                                 }
                             }
                         }
@@ -150,6 +195,17 @@ namespace pryFuzzi01042026
         private void frmMain_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void lblDebug_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {            
+            dgvData.Rows.Remove(dgvData.CurrentRow);
+            MessageBox.Show("Datos eliminados exitosamente.", "Proceso Finalizado.", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
