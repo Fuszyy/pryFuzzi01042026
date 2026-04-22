@@ -222,5 +222,47 @@ namespace pryFuzzi01042026
                 cbxCateg.Enabled = false;
             }
         }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            DialogResult result2 = MessageBox.Show("¿Editar los datos de este contacto?", "Editar contacto.", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result2 == DialogResult.Yes)
+            {
+                if (dgvData.CurrentRow == null)
+                {
+                    MessageBox.Show("No hay un producto seleccionado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    if (txtName.Text == "" || txtCode.Text == "" || txtDesc.Text == "" || txtPrice.Text == "" || cbxCateg.Text == "")
+                    {
+                        MessageBox.Show("Complete los datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        dgvData.CurrentRow.Cells[0].Value = txtName.Text;
+                        dgvData.CurrentRow.Cells[1].Value = txtCode.Text;
+                        dgvData.CurrentRow.Cells[2].Value = txtDesc.Text;
+                        dgvData.CurrentRow.Cells[3].Value = txtPrice.Text;
+                        dgvData.CurrentRow.Cells[4].Value = txtStock.Text;
+                        dgvData.CurrentRow.Cells[5].Value = cbxCateg.Text;
+                        MessageBox.Show("Producto editado correctamente.", "Proceso finalizado.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtName.Text = string.Empty;
+                        txtCode.Text = string.Empty;
+                        txtDesc.Text = string.Empty;
+                        txtPrice.Text = string.Empty;
+                        txtStock.Text = string.Empty;
+                        cbxCateg.SelectedItem = null;
+
+                        txtCode.Enabled = false;
+                        txtDesc.Enabled = false;
+                        txtPrice.Enabled = false;
+                        txtStock.Enabled = false;
+                        cbxCateg.Enabled = false;
+                    }
+
+                }
+            }
+        }
     }
 }

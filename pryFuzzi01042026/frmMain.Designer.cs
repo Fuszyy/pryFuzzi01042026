@@ -52,6 +52,7 @@
             this.ColumnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.gpbMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +60,7 @@
             // gpbMain
             // 
             this.gpbMain.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.gpbMain.Controls.Add(this.btnEdit);
             this.gpbMain.Controls.Add(this.lblTitle);
             this.gpbMain.Controls.Add(this.btnDelete);
             this.gpbMain.Controls.Add(this.btnAdd);
@@ -77,7 +79,7 @@
             this.gpbMain.Location = new System.Drawing.Point(57, 12);
             this.gpbMain.Name = "gpbMain";
             this.gpbMain.Size = new System.Drawing.Size(680, 289);
-            this.gpbMain.TabIndex = 0;
+            this.gpbMain.TabIndex = 1;
             this.gpbMain.TabStop = false;
             this.gpbMain.Enter += new System.EventHandler(this.gpbMain_Enter);
             // 
@@ -94,17 +96,17 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(581, 255);
+            this.btnDelete.Location = new System.Drawing.Point(588, 255);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnDelete.TabIndex = 8;
+            this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "Eliminar";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(500, 255);
+            this.btnAdd.Location = new System.Drawing.Point(424, 255);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 7;
@@ -287,6 +289,16 @@
             this.ColumnCategory.HeaderText = "Categoría";
             this.ColumnCategory.Name = "ColumnCategory";
             // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(506, 255);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.TabIndex = 8;
+            this.btnEdit.Text = "Modificar";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,6 +347,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCategory;
+        private System.Windows.Forms.Button btnEdit;
     }
 }
 
